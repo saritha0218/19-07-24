@@ -7,7 +7,7 @@
     <style>
         body{
             font-size: 20px;
-            background-color: rgb(213, 233, 234);
+            background-color: rgb(182, 190, 190);
         }
         header > div{
             height: 30%;
@@ -199,7 +199,6 @@
             top: 0;
             border-bottom: 2px solid black;
             background-color: white;
-            /* z-index: 100; */
         }
         #main .i1{
             width: 40px;
@@ -239,15 +238,23 @@
             margin-left: 40px;
             font-size: 30px;
         }
-        #chat{
-            
+        #chat h5{
+            position: sticky;
+            top: 83px;
+            margin-top: 5px;
+            margin-left: 45%;
+            border-radius: 8px;
+            border: 2px solid black;
+            background-color: rgb(239, 249, 250);
+            padding: 5px;
+            display: inline-block;
         }
         #chat .p1{
             width: 300px;
             display: inline-block;
             padding: 8px;
             margin-left: 15px;
-            border-radius: 8px;
+            border-radius: 15px;
             border: 2px solid black;
             border-bottom-left-radius: 0px;
         }
@@ -256,9 +263,36 @@
             width: 300px;
             margin-left: 640px;
             margin-right: 15px;
-            border-radius: 8px;
+            border-radius: 15px;
             border: 2px solid black;
             border-bottom-right-radius: 0px;
+        }
+        #last{
+            height: 50px;
+            display: flex;
+            position: sticky;
+            bottom: 0;
+            border-top: 2px solid black;
+            background-color: rgb(228, 218, 218);
+        }
+        #last .is{
+            font-size: 35px;
+            margin: 5px;
+            margin-left: 30px;
+        }
+        #last .ip{
+            font-size: 35px;
+            margin: 5px;
+        }
+        #last .type{
+            width: 700px;
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        #last .im{
+            font-size: 30px;
+            margin: 5px;
+            margin-left: 15px;
         }
     </style>
 </head>
@@ -381,6 +415,7 @@
                 <ion-icon class="i4" name="ellipsis-vertical"></ion-icon>
              </div>
              <div id="chat">
+                <h5>YESTERDAY</h5><br>
                 <p class="p1">Hi Saritha, how are you today?</p>
                 <p class="p2"> Hi, Mam. I’m good, thanks. How about you?</p>
                 <p class="p1"> I’m doing well, thanks. I wanted to check in with you about the math test next week. Do you have any questions or concerns?</p>
@@ -396,7 +431,7 @@
                 <p class="p1">You too, Saitha. Take care! </p>
                 <p class="p2">Okay Mam</p>
                 
-               
+                <h5 style="padding: 5px 40px;margin-left:43.6%;">TODAY</h5><br>
                 <p class="p1">Hi, Saritha. How do you feel about the mock review?</p>
                 <p class="p2"> Hi, Mam. I’m a bit nervous. How did I do?</p>
                 <p class="p1"> Overall, you did really well. You got most of the questions right. There are just a few areas we can review more.</p>
@@ -411,6 +446,12 @@
                 <p class="p2">Thanks, Mam. I appreciate your help.</p>
                 <p class="p1"> Anytime! See you in class.</p>
                 <p class="p2">See you!</p>
+             </div>
+             <div id="last">
+                <ion-icon class="is" name="happy-outline"></ion-icon>
+                <ion-icon class="ip" name="add-outline"></ion-icon>
+                <input class="type" type="text" placeholder="Type a message">
+                <ion-icon class="im" name="mic"></ion-icon>
              </div>
         </div> 
     </div>  
