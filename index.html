@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp</title>
+    <style>
+        body{
+            font-size: 20px;
+            background-color: rgb(213, 233, 234);
+        }
+        header > div{
+            height: 30%;
+            width: 100%;
+            background-color: #268e6b;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        header ion-icon{
+            margin-left: 30%;
+            margin-top: 30px;
+            font-size: 45px;
+            color: white;
+        }
+        header p{
+            color: white;
+            font-size:20px;
+            font-weight:900;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 510px;
+        }
+        #section1{
+            height: 670px;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 10px;
+            padding-bottom:15px;
+            display: grid;
+            grid-template-columns: repeat(3,492px);
+            grid-template-rows: repeat(1, 100%);
+        }
+
+/* grid1 starts */
+
+        .grid1{
+            background-color: white;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            overflow-y:scroll;
+            scrollbar-width: thin;
+        }
+        nav{
+            height: 60px;
+            display: flex;
+            padding-top: 20px;
+        }
+        nav > h1 {
+            color: #036d10;
+            font-size: 30px;
+            margin-left: 10px;
+            margin-top: -1px;
+        }
+        nav ion-icon{
+            margin-top: 5px;
+            font-size: 30px;
+        }
+        .i1{
+            margin-left: 267px;
+            font-size: 33px;
+        }
+        .i2{
+            margin-left: 35px;
+        }
+
+
+        input{
+            height: 35px;
+            width: 320px;
+            font-size: 20px;
+            border: none;
+            background-color: rgb(247, 239, 239);
+            border-radius: 20px;
+            padding-bottom: 2px; 
+            padding-left: 70px; 
+            margin-left:-50px;
+        }
+        input:focus + #ion1 {
+            display: inline-block;
+        }
+       #ion1{
+        padding: 4px;
+        margin-left: 55px;
+        font-size: 30px;
+        
+       }
+
+        #in{
+            display: flex;
+        }
+
+        #btn{
+            display: flex;
+            gap: 20px;
+            padding-top: 15px;
+            padding-left: 50px;
+        }
+        .b1{
+            font-size: 15px;
+            padding: 12px;
+            color: gray;
+            border: none;
+            border-radius: 18px;
+            background-color: rgb(214, 245, 214);
+        }
+        .b2{
+            font-size: 15px;
+            padding: 9px;
+            color: gray;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(247, 239, 239);
+        }
+        .b2:hover{
+            background-color: rgb(223, 210, 210);
+        }
+
+        #arch{
+            display: flex;
+            padding-top: 15px;
+            padding-left: 10px;
+        }
+        #arch .a1{
+            font-size: 30px;
+            padding-top: 3px;
+            color: #036d10;
+        }
+        #arch .a2{
+            display: flex;
+            font-size: 22px;
+            margin-top: -18px;
+            margin-left: 10px;
+        }
+        .a2 .p2{
+            margin-left: 290px;
+            color: rgb(79, 239, 79);
+        }
+
+        #pro{
+            display: flex;
+            padding-top: 15px;
+            padding-left: 10px;
+        }
+        #pro .pr1{
+            width: 55px;
+            height: 50px;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 10px;
+            color: white;
+            background-color: #036d10;
+            border: 0.5px solid gray;
+            border-radius: 50%;
+        }
+        #pro .pr2{
+            margin-left: 10px;
+            margin-top: -25px;
+        }
+        #pro .pr2 p{
+            margin-top: -20px;
+        }
+        #pro .pr2 ion-icon{
+            font-size: 25px;
+            color: rgb(26, 167, 213);
+        }
+        /* grid1 ends */
+
+        /* grid2 starts */
+        .grid2{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background-color: rgb(237, 233, 232);
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            overflow-y:scroll;
+            scrollbar-width: thin;
+        }
+        #g2 p{
+           color: rgb(77, 74, 74);
+           font-size: 55px;
+           margin-top: 32%;
+           margin-left: 23%;
+           display: none;
+        }
+        #main{
+            display: flex;
+            position: sticky;
+            top: 0;
+            border-bottom: 2px solid black;
+            background-color: white;
+            /* z-index: 100; */
+        }
+        #main .i1{
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+            margin: 8px;
+            color: white;
+            background-color: #036d10;
+            border: 0.5px solid gray;
+            border-radius: 50%;
+        }
+        #main p{
+            font-size: 25px;
+            margin-left: 10px;
+            margin-top: 25px;
+        }
+        #main .i2{
+            color: rgb(148, 134, 134);
+            border: 1px solid rgb(148, 134, 134) ;
+            border-radius: 18px;
+            padding: 8px 20px;
+            font-size: 30px;
+            margin-top: 17px;
+            margin-left: 480px;
+        }
+        #main .i3{
+            color: rgb(92, 86, 86);
+            margin-top: 27px ;
+            margin-left: 40px;
+            font-size: 30px;
+        }
+        #main .i4{
+            color: rgb(92, 86, 86);
+            margin-top: 27px ;
+            margin-left: 40px;
+            font-size: 30px;
+        }
+        #chat{
+            
+        }
+        #chat .p1{
+            width: 300px;
+            display: inline-block;
+            padding: 8px;
+            margin-left: 15px;
+            border-radius: 8px;
+            border: 2px solid black;
+            border-bottom-left-radius: 0px;
+        }
+        #chat .p2{
+            padding: 8px;
+            width: 300px;
+            margin-left: 640px;
+            margin-right: 15px;
+            border-radius: 8px;
+            border: 2px solid black;
+            border-bottom-right-radius: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            <p>WHATSAPP WEB</p>
+        </div>
+    </header>
+
+    <section id="section1">
+        <div class="grid1">
+            <nav>
+                <h1>Chats</h1>
+                <ion-icon class="i1" name="camera-outline"></ion-icon>
+                <ion-icon class="i2" name="ellipsis-vertical"></ion-icon>
+            </nav>
+            <div id="in">
+                <label for="input"><ion-icon id="ion1" name="search-outline"></ion-icon></label>
+                <input id="input" type="text" placeholder="Search" > 
+             </div>
+             <div id="btn">
+                <button class="b1">All</button>
+                <button class="b2">Unread</button>
+                <button class="b2">Groups</button>
+             </div>
+             <div id="arch">
+                <div class="a1">
+                <ion-icon name="archive-outline"></ion-icon>
+                </div>
+                <div class="a2">
+                <p class="p1">Archived</p>
+                <p class="p2">3</p>
+                </div>
+             </div>
+             <hr>
+             <div id="pro">
+                <div class="pr1">
+                    <ion-icon name="people-outline"></ion-icon>
+                </div>
+                <div class="pr2">
+                    <h3>9R-10000coders-Offline</h3>
+                    <p>Vineela Mam: Hiii guys good morning...</p>
+                </div>
+             </div>
+             <hr>
+             <div id="pro">
+                <div class="pr1">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <div class="pr2">
+                    <h3>Vineela Mam (PM)</h3>
+                    <p><ion-icon name="checkmark-done-outline"></ion-icon>Okay mam...</p>
+                </div>
+             </div>
+             <hr>
+             <div id="pro">
+                <div class="pr1">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <div class="pr2">
+                    <h3>Chaitanya Sir</h3>
+                    <p><ion-icon name="checkmark-done-outline"></ion-icon>Thank You Sir....</p>
+                </div>
+             </div>
+             <hr>
+             <div id="pro">
+                <div class="pr1">
+                    <ion-icon name="people-outline"></ion-icon>
+                </div>
+                <div class="pr2">
+                    <h3>ASTC College</h3>
+                    <p>Community members have changed.Click...</p>
+                </div>
+             </div>
+             <hr>
+             <div id="pro">
+                <div class="pr1">
+                    <ion-icon name="people-outline"></ion-icon>
+                </div>
+                <div class="pr2">
+                    <h3>ASTC 2020-24</h3>
+                    <p>Uma Sir:Forwarded a message...</p>
+                </div>
+             </div>
+             <hr>
+             <div id="pro">
+                <div class="pr1">
+                    <ion-icon name="people-outline"></ion-icon>
+                </div>
+                <div class="pr2">
+                    <h3>CSE ROCKS</h3>
+                    <p><ion-icon name="checkmark-done-outline"></ion-icon>Bye.... gud ni8......</p>
+                </div>
+             </div>
+             <hr>
+             <div id="pro">
+                <div class="pr1">
+                    <ion-icon name="people-outline"></ion-icon>
+                </div>
+                <div class="pr2">
+                    <h3>Fresher Jobs</h3>
+                    <p>We're Hiring Fresher .........</p>
+                </div>
+             </div>
+        </div>
+
+
+    <div class="grid2">
+             <div id="g2">
+                <p>WhatsApp for Windows.</p>
+             </div>
+        <div id="dis">
+             <div id="main">
+                <ion-icon class="i1" name="person-outline"></ion-icon>
+                <p>Vineela Mam(PM)</p>
+                <ion-icon class="i2" name="videocam-outline"></ion-icon>
+                <ion-icon class="i3" name="search-outline"></ion-icon>
+                <ion-icon class="i4" name="ellipsis-vertical"></ion-icon>
+             </div>
+             <div id="chat">
+                <p class="p1">Hi Saritha, how are you today?</p>
+                <p class="p2"> Hi, Mam. I’m good, thanks. How about you?</p>
+                <p class="p1"> I’m doing well, thanks. I wanted to check in with you about the math test next week. Do you have any questions or concerns?</p>
+                <p class="p2">Actually, yes. I’m a bit worried about the section on algebra. I don’t feel very confident with it.</p>
+                <p class="p1"> That’s understandable. Algebra can be tricky. Would it help if we went over some of the key concepts together?</p>
+                <p class="p2">That would be great. I think I just need a bit more practice with solving equations.</p>
+                <p class="p1"> Sure thing. How about we set up a review session after school tomorrow?</p>
+                <p class="p2">Tomorrow works for me. What time should we meet?</p>
+                <p class="p1"> Let’s say 3:30 PM in the library. I’ll bring some extra practice problems for us to work through.</p>
+                <p class="p2">Sounds perfect. Thanks a lot for helping out.</p>
+                <p class="p1"> No problem at all. I’m here to help. See you tomorrow at 3:30!</p>
+                <p class="p2">See you then. Have a good day!</p>
+                <p class="p1">You too, Saitha. Take care! </p>
+                <p class="p2">Okay Mam</p>
+                
+               
+                <p class="p1">Hi, Saritha. How do you feel about the mock review?</p>
+                <p class="p2"> Hi, Mam. I’m a bit nervous. How did I do?</p>
+                <p class="p1"> Overall, you did really well. You got most of the questions right. There are just a few areas we can review more.</p>
+                <p class="p2">Really? That’s good to hear. Which areas do I need to work on?</p>
+                <p class="p1"> Mainly the word problems and some of the fraction operations. Those were a bit tricky.</p>
+                <p class="p2">Okay, I’ll focus on those. Do you have any tips for improving?</p>
+                <p class="p1">For word problems, try breaking them down into smaller steps. For fractions, practice a few more problems to build confidence.</p>
+                <p class="p2"> That sounds helpful. How about my time management during the test?</p>
+                <p class="p1"> You did pretty well with time, but try to pace yourself so you have a few minutes to review your answers.</p>
+                <p class="p2"> Got it. Thanks for the advice. I’ll practice and try to improve.</p>
+                <p class="p1"> You’re welcome. Keep up the good work, and you’ll be ready for the real test.</p>
+                <p class="p2">Thanks, Mam. I appreciate your help.</p>
+                <p class="p1"> Anytime! See you in class.</p>
+                <p class="p2">See you!</p>
+             </div>
+        </div> 
+    </div>  
+    </section>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
