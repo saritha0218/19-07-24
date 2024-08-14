@@ -7,20 +7,22 @@
     <link rel="icon" type="image/x-icon" href="./whatsapp.png">
     <style>
         body{
+            padding: 0;
+            margin: 0;
             font-size: 20px;
             background-color: rgb(182, 190, 190);
         }
-        header > div{
+        header{
             height: 30%;
-            width: 100%;
             background-color: #268e6b;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
+            width: 100%;
         }
         header ion-icon{
             margin-left: 30%;
-            margin-top: 30px;
+            margin-top: 10px;
             font-size: 45px;
             color: white;
         }
@@ -30,16 +32,16 @@
             font-weight:900;
             position: absolute;
             margin-top: -40px;
-            margin-left: 510px;
+            margin-left: 33.5%;
         }
         #section1{
             height: 670px;
             position: absolute;
-            margin-top: 80px;
-            margin-left: 10px;
+            margin-top: 25px;
+            margin-left: 20px;
             padding-bottom:15px;
             display: grid;
-            grid-template-columns: repeat(3,492px);
+            grid-template-columns: repeat(3,32.5%);
             grid-template-rows: repeat(1, 100%);
         }
 
@@ -186,6 +188,7 @@
             scroll-behavior: smooth;
             overflow-y:scroll;
             scrollbar-width: thin;
+            width: 100%;
         }
         #g2 p{
            color: rgb(77, 74, 74);
@@ -251,7 +254,7 @@
             display: inline-block;
         }
         #chat .p1{
-            width: 300px;
+            width: 30%;
             display: inline-block;
             padding: 8px;
             margin-left: 15px;
@@ -262,7 +265,7 @@
         }
         #chat .p2{
             padding: 8px;
-            width: 300px;
+            width: 30%;
             margin-left: 640px;
             margin-right: 15px;
             border-radius: 15px;
@@ -297,13 +300,28 @@
             margin: 5px;
             margin-left: 15px;
         }
+                                           /* MEDIA QUERIES */
+            @media screen and (width < 750px){
+                header{
+                    width:;
+                }
+                #section1{
+                    display: block;
+                }
+                .grid1{
+                    display:none;
+                }
+                .grid2{
+                    margin-top: -25px;
+                    margin-left: -20px;
+                }
+                
+            }
     </style>
 </head>
 <body>
     <header>
         <div>
-            <ion-icon name="logo-whatsapp"></ion-icon>
-            <p>WHATSAPP WEB</p>
         </div>
     </header>
 
@@ -456,7 +474,7 @@
                 <input class="type" type="text" placeholder="Type a message">
                 <ion-icon class="im" name="mic"></ion-icon>
              </div>
-        </div> 
+            </div> 
     </div>  
     </section>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
